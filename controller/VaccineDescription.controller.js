@@ -82,7 +82,7 @@ const updateVaccineDescription = (req, res) => {
 
 //delete a VaccineDescription
 const deleteVaccineDescription = (req, res) => {
-    VaccineDescription.findByIdAndDelete(req.params.id, (err, data) => {
+    VaccineDescriptionModal.findByIdAndDelete(req.params.id, (err, data) => {
         if (err) {
             res.status(500).send(err);
         } else {
