@@ -7,5 +7,8 @@ const vaccineScheduleSchema = new Schema({
   vaccineTime: { type: String, required: true },
 });
 
-const VaccineModel = mongoose.model('VaccineModel', vaccineScheduleSchema);
-module.exports = VaccineModel;
+const VaccineScheduleModel = mongoose.model(
+  'VaccineModel',
+  vaccineScheduleSchema
+);
+module.exports = VaccineScheduleModel;

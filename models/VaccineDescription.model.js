@@ -7,7 +7,7 @@ const vaccineDescriptionSchema = new Schema({
 });
 
 const VaccineDescriptionModel = mongoose.model(
-  'VaccineModel',
+  'VaccineDescriptionModel',
   vaccineDescriptionSchema
 );
 module.exports = VaccineDescriptionModel;
