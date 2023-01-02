@@ -17,10 +17,6 @@ const addChild = (req, res) => {
                     data: result,
                     response: true,
                 },
-            })
-            .catch((err) => {
-                console.log('err', err);
-                res.status(400).json(err);
             });
     });
 };

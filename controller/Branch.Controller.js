@@ -3,11 +3,13 @@ const BranchModal = require('./../models/Branch.model');
 //addBranch function
 const addBranch = (req, res) => {
     const {
-        userID, userName, userPassword, userBranchName, userAddress, userContactNumber, userDistrict, userCity
+        userID, userName, userPassword, userEmail
     } = req.body;
 
+    console.log(req.body);
+
     const mongooseRes = new BranchModal({
-        userID, userName, userPassword, userBranchName, userAddress, userContactNumber, userDistrict, userCity
+        userID, userName, userPassword, userEmail
     });
 
     mongooseRes.save().then((result) => {
@@ -18,10 +20,7 @@ const addBranch = (req, res) => {
                     data: result, response: true,
                 },
             })
-            .catch((err) => {
-                console.log('err', err);
-                res.status(400).json(err);
-            });
+           
     });
 };
 
